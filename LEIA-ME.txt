@@ -1,0 +1,10 @@
+MA CHÉRIE — SITE DE LETTRE D'AMOUR
+
+Pour voir le site :
+1. Extraia o ZIP.
+2. Abra a pasta ma_cherie_site.
+3. Clique duas vezes em index.html.
+
+O site está em francês, adapta-se a celulares e computadores e inclui uma composição visual com as duas fotos.
+Para enviar um link público à sua namorada, publique a pasta em um serviço de hospedagem estática, como Netlify ou GitHub Pages.
+Não precisa de XAMPP, PHP ou banco de dados.

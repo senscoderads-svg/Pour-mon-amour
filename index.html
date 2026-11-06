@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#210509">
+<title>Ma Chérie — Une lettre d'amour</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+:root{--wine:#27040c;--red:#a51e35;--rose:#f2a1ad;--paper:#f7e4d8;--ink:#32151a;--gold:#d9ad78}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:#080609;color:#fff4ee;font-family:'DM Sans',sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 15% 15%,#8d10252b,transparent 40%),radial-gradient(ellipse at 85% 70%,#b21b3020,transparent 40%),linear-gradient(120deg,#050406,#16070c 55%,#090507);z-index:-1}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#d7a77c 0.6px,transparent .6px);background-size:5px 5px;mask-image:linear-gradient(transparent,#000)}
+nav{position:sticky;top:12px;z-index:5;width:min(900px,calc(100% - 28px));margin:12px auto -65px;border:1px solid #d9ad7840;background:#10080de8;backdrop-filter:blur(16px);border-radius:40px;padding:13px 20px;display:flex;justify-content:center;gap:clamp(12px,4vw,40px);font:italic 16px 'Playfair Display',serif;box-shadow:0 8px 35px #0008}
+nav a{color:#e9c8bd;text-decoration:none;transition:color .2s}nav a:hover{color:#ff8c9c}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:95px 20px 55px;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,#5c10202b,transparent 62%);pointer-events:none}
+.hero-inner{width:min(1100px,100%);display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:clamp(24px,5vw,65px);position:relative}
+.photo-frame{position:relative;border-radius:22px;overflow:hidden;box-shadow:0 25px 90px #000;border:1px solid #d9ad7855}
+.photo-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#17050bb0,transparent 42%),linear-gradient(120deg,#12050b33,#8b142633);pointer-events:none}
+.photo-frame img{display:block;width:100%;height:auto;filter:sepia(.13) saturate(.8) contrast(1.08)}
+.hero-copy{text-align:center}
+.eyebrow{color:#d9ad78;text-transform:uppercase;letter-spacing:.3em;font-size:10px;font-weight:600}
+h1{font:italic 500 clamp(48px,7vw,86px)/1.05 'Playfair Display',serif;margin:22px 0;color:#f9d5ca;text-shadow:0 0 35px #f45a7048}
+.hero-copy p{font:italic clamp(19px,2.2vw,25px)/1.6 'Playfair Display',serif;color:#d9c0bd}
+.heart{color:#ff657d;font-size:26px;display:inline-block;animation:pulse 1.8s infinite;text-shadow:0 0 18px #ff456a}
+.cta{display:inline-block;margin-top:20px;border:1px solid #d9ad78;border-radius:40px;padding:14px 24px;color:#ffe9df;text-decoration:none;background:linear-gradient(120deg,#711326,#26050c);box-shadow:0 8px 30px #9c1d343d;transition:transform .25s,box-shadow .25s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 12px 35px #a51e3566}
+section.letter-section{padding:70px 18px 90px;background:linear-gradient(180deg,#0b0609,#21070e)}
+.paper{max-width:800px;margin:auto;padding:clamp(30px,6vw,70px);background:linear-gradient(145deg,#f8e8dc,#e9c9b9);color:var(--ink);border-radius:4px;box-shadow:0 20px 100px #000,0 0 45px #9b21352a;position:relative}
+.paper:before{content:"";position:absolute;inset:12px;border:1px solid #c18a7e;pointer-events:none}
+.paper h2{text-align:center;font:italic 500 clamp(42px,6vw,62px) 'Playfair Display',serif;color:#86172b;margin:0 0 10px}
+.sub{text-align:center;color:#98616a;font:italic 17px 'Playfair Display',serif;margin-bottom:32px}
+.letter{font:italic clamp(18px,2.1vw,21px)/1.85 'Playfair Display',serif;text-align:center;position:relative}
+.letter p{margin:0 0 19px}.letter strong{color:#94182d;font-weight:600}
+.ornament{text-align:center;color:#9d2439;margin:18px 0;font-size:19px}
+.signature{text-align:center;font:italic clamp(34px,5vw,50px) 'Playfair Display',serif;color:#94182d;margin:30px 0 0}
+.end{text-align:center;padding:60px 20px 75px;background:radial-gradient(ellipse at center,#3a0b18 0,transparent 65%)}
+.end h2{font:italic clamp(35px,6vw,55px) 'Playfair Display',serif;color:#f5c0c6;margin:0 0 12px}
+.end p{color:#d6aab1}
+footer{text-align:center;padding:20px;color:#a97982;font-size:11px;letter-spacing:.15em;text-transform:uppercase;border-top:1px solid #ffffff12}
+.envelope-screen{position:fixed;inset:0;z-index:20;display:flex;align-items:center;justify-content:center;padding:24px;background:radial-gradient(ellipse at center,#260912 0,#090609 72%);transition:opacity .9s ease,visibility .9s}
+.envelope-screen.closed{opacity:1;visibility:visible}
+.envelope-screen.opened{opacity:0;visibility:hidden;pointer-events:none}
+.mystery-box{text-align:center;max-width:440px;width:100%;padding:35px 24px}
+.mystery-kicker{font-size:10px;letter-spacing:.34em;text-transform:uppercase;color:#d9ad78}
+.mystery-title{font:italic 500 clamp(38px,8vw,58px)/1.1 'Playfair Display',serif;color:#f5d5cc;margin:22px 0 12px}
+.mystery-copy{font:italic 17px/1.7 'Playfair Display',serif;color:#c7aeb0;margin:0 auto 26px;max-width:330px}
+.seal{width:105px;height:105px;margin:25px auto;border-radius:50%;display:grid;place-items:center;border:1px solid #c58c6a;color:#f4b6a8;font-size:43px;background:radial-gradient(circle,#551323,#1b070d);box-shadow:0 0 45px #b3264538,inset 0 0 22px #000}
+.open-button{border:1px solid #d9ad78;background:linear-gradient(120deg,#76152a,#26050c);color:#ffe9df;border-radius:40px;padding:15px 27px;font:600 12px 'DM Sans',sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;box-shadow:0 8px 35px #a51e3540}
+.open-button:hover{filter:brightness(1.2)}
+.mystery-note{font:italic 13px 'Playfair Display',serif;color:#987b80;margin-top:22px}
+@keyframes pulse{50%{transform:scale(1.2)}}
+@media(max-width:760px){nav{gap:13px;padding:12px 10px;font-size:12px;margin-bottom:-55px}.hero{padding-top:100px}.hero-inner{grid-template-columns:1fr;max-width:560px}.photo-frame{max-width:430px;margin:auto}.hero-copy{grid-row:1}.hero-copy p{margin:12px auto;max-width:360px}.letter-section{padding-top:45px!important}}
+@media print{body{background:white;color:black}nav,.cta,.envelope-screen{display:none}.hero{min-height:auto}.letter-section{background:white}.paper{box-shadow:none}}
+@media print{body{background:white;color:black}nav,.cta{display:none}.hero{min-height:auto}.letter-section{background:white}.paper{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="envelope-screen closed" id="mystery">
+  <div class="mystery-box">
+    <div class="mystery-kicker">Un secret gardé dans mon cœur</div>
+    <div class="seal">♡</div>
+    <h2 class="mystery-title">À toi de découvrir…</h2>
+    <p class="mystery-copy">Il y a quelque chose que je ne peux plus garder pour moi. Mais avant de le découvrir, promets-moi de lire avec ton cœur…</p>
+    <button class="open-button" onclick="revealLetter()">Briser le sceau&nbsp; ♡</button>
+    <div class="mystery-note">Cette lettre n'appartient qu'à toi.</div>
+  </div>
+</div>
+<nav><a href="#accueil">♡ Mon Amour</a><a href="#lettre">Ma Lettre</a><a href="#avenir">Notre Avenir</a><a href="#fin">Toujours Ensemble ♡</a></nav>
+<header class="hero" id="accueil"><div class="hero-inner">
+<div class="photo-frame"><img src="couple-cover.png" alt="Un montage romantique de nos deux photos"></div>
+<div class="hero-copy"><div class="eyebrow">Un secret que mon cœur ne peut plus taire</div><h1>Ma Chérie…</h1><p>Il y a des mots qu’on ne dit pas…<br>mais qu’on écrit avec le cœur.</p><div class="heart">♡</div><br><a class="cta" href="#lettre">Découvrir mon secret ♥</a></div>
+</div></header>
+<section class="letter-section" id="lettre"><article class="paper">
+<h2>Qui est-ce&nbsp;?</h2><div class="sub">Une question… et une seule personne connaît la réponse.</div>
+<div class="letter">
+<p>Est-ce quelqu’un que je dois aimer sans raison, sans motivation, ni rien attendre en retour&nbsp;?</p>
+<div class="ornament">✦</div>
+<p>Je dois l’aimer sans raison, <strong>parce qu’elle est ma raison&nbsp;!</strong></p>
+<p>Je n’ai pas besoin de motivation, <strong>parce que c’est elle qui me motive&nbsp;!</strong></p>
+<p>Je n’ai pas besoin de chercher les sentiments, <strong>parce qu’elle est au cœur de tous les miens&nbsp;!</strong></p>
+<p>Elle me donne de l’espoir quand je n’en ai plus&nbsp;!</p>
+<p id="avenir">Elle me fait croire en notre magnifique avenir tant rêvé, celui où nous serons réunis dans la présence de Dieu, vivant un amour sincère, profond et béni&nbsp;!</p>
+<p>Elle m’écoute avec patience lorsque j’ai besoin d’ouvrir mon cœur et de me confier&nbsp;!</p>
+<p>Elle apaise mon âme lorsque je suis perdu ou désespéré&nbsp;!</p>
+<div class="ornament">♡ &nbsp; ✧ &nbsp; ♡</div>
+<p><strong>Et je n’ai pas peur de me donner entièrement à elle, parce que mon cœur la choisit, encore et encore&nbsp;!</strong></p>
+</div>
+<div class="signature">Je t’aime&nbsp;! ♡</div>
+</article></section>
+<section class="end" id="fin"><h2>Un secret… une promesse… nous.</h2><p>Si tu es arrivée jusqu’ici, tu connais déjà le secret.</p><div class="heart">∞</div></section>
+<footer>Écrit avec amour, rien que pour toi · ♡</footer>
+<script>
+function revealLetter(){
+  const screen=document.getElementById('mystery');
+  screen.classList.remove('closed');
+  screen.classList.add('opened');
+  document.body.style.overflow='auto';
+}
+document.body.style.overflow='hidden';
+</script>
+</body></html>
